@@ -11,7 +11,7 @@ function SearchForm (props) {
             value={props.search}
             name='search'
             type='text'
-            placeholder='Search here ...'
+            placeholder='Search Firstname here ...'
             id='search'
           />
         </div>

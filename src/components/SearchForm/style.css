@@ -1,0 +1,19 @@
+input{
+    margin-top: 15px;
+    text-align: center;
+    height: 30px;
+    width: 20%;
+     padding:10px;
+     background-color: rgb(165, 234, 247); 
+     
+    }
+ 
+     .form-group{
+        text-align: center;
+        /* background-color: #caccd0d6; */
+        background-color: #666769d6;
+        margin-top: 10px;
+        height: 58px;
+        width: 100%;
+
+    } 
