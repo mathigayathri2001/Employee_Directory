@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import API from "../../utils/API";
 import './style.css'
-// import SearchForm from "../../components/SearchForm";
+import SearchForm from "../../components/SearchForm";
 // import Table from "../../components/Table";
 // import Container from "../../components/Container"
 
@@ -21,12 +21,22 @@ class Main extends Component {
           })
           .catch((err) => console.log(err));
       }
+      handleInputChange = (event) => {
+        let value = event.target.value;
+        let name = event.target.name;
+        this.setState({
+          [name]: value
+        })
+    };
 
 
 render() {
     return (
       <div>
-        
+        <SearchForm
+          handleInputChange={this.handleInputChange}
+          search={this.state.search}
+        />
         
       </div>
     );
