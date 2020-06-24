@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "./components/Header";
 // import SearchForm from "./components/SearchForm";
-import Main from "./components/Main";
+// import Main from "./components/Main";
 
 function App() {
   return (
     <div>
       <Header />
       {/* <SearchForm/> */}
-      <Main />
+      {/* <Main /> */}
     </div>
   );
 }
