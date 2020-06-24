@@ -29,17 +29,17 @@ thead tr {
     color: white;
 }
 
-
+tbody{
+    font-size: 15px;
+}
 
  .img {
     padding: 10px;
 } 
 
-.name {
-    display: inline-block;
-}
 
-.name:hover {
+
+.downArrow:hover {
     cursor: pointer;
 }
  
