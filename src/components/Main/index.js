@@ -50,7 +50,7 @@ render() {
           </thead>
           <tbody>
             {  this.state.results && this.state.results.map((item) =>
-               (
+               item.name.first.toLowerCase().includes(this.state.search) ?(
                 <Table
                   key={item.login.uuid}
                   image={item.picture.thumbnail}
@@ -60,7 +60,7 @@ render() {
                   location={`${item.location.city} , ${item.location.state} , ${item.nat}`}
                   
                 />
-              ) 
+              )  : null
             )}
           </tbody>                                                  
         </table>
