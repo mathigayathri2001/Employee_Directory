@@ -1,0 +1,16 @@
+.header {
+    background: #13d6f9;
+    height: 100px;
+    border-bottom: solid;
+    border-color: rgb(65, 87, 3);
+    border-width: 5px;
+  }
+  
+  .header h3 {
+    margin: 0;
+    padding-top: 15px;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+  }
+  
