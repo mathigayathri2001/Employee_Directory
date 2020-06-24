@@ -7,17 +7,10 @@ table {
     border-width: 1px;
     margin: auto;
     margin-top: 30px; 
-      overflow-x: auto;
+    overflow-x: auto;
     width: 80%;
     text-align: center;
-}   
-
- /* Table{
-    color: #2c0be7;
-   
-}  */
-  
- 
+}  
 
 tr {
     height: 100px;
@@ -25,7 +18,7 @@ tr {
 
 thead tr {
     height: 50px;
-    background-color: #8273d6;
+    background-color:#185a66;
     color: white;
 }
 
@@ -33,9 +26,9 @@ tbody{
     font-size: 15px;
 }
 
- .img {
+ /* .img {
     padding: 10px;
-} 
+}  */
 
 
 
