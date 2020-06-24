@@ -29,6 +29,26 @@ class Main extends Component {
         })
     };
 
+    sortByName = () => {
+      const sortedEmployees = this.state.results.sort((a, b) => {
+        if (b.name.first > a.name.first) {
+          return -1
+        }
+        if (a.name.first > b.name.first) {
+          return 1
+        }
+        return 0;
+      });
+  
+      if (this.state.sortOrder === "DESC") {
+        sortedEmployees.reverse();
+        this.setState({ sortOrder: "ASC" });
+      } else {
+        this.setState({ sortOrder: "DESC" });
+      }
+      this.setState({ results: sortedEmployees })
+    }
+
 
 render() {
     return (
@@ -42,7 +62,7 @@ render() {
           <thead>
             <tr>
               <th>Image</th>
-              <th>Name  </th>
+              <th>Name  <span className="downArrow" onClick={this.sortByName}></span></th>
               <th>Phone</th>
               <th>Email</th>
               <th>City,State,Country</th>
