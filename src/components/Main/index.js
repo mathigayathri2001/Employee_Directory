@@ -29,45 +29,42 @@ class Main extends Component {
         })
     };
 
-    sortByName = () => {
+    sortByAscName = () => {
       const sortedEmployees = this.state.results.sort((a, b) => {
-        if (b.name.first > a.name.first) {
+        if (a.name.first > b.name.first  ) {
           return -1
         }
-        if (a.name.first > b.name.first) {
-          return 1
-        }
         return 0;
+               
+      });
+  
+      if (this.state.sortOrder === "ASC") {
+        sortedEmployees.reverse();
+        this.setState({ sortOrder: "DESC" });
+       } 
+      else {
+        this.setState({ results: sortedEmployees })
+      }
+     
+    }
+    sortByDscName = () => {
+      const sortedEmployees = this.state.results.sort((a, b) => {
+        if (b.name.first > a.name.first ) {
+          return-1
+        }      
+        return 0;              
       });
   
       if (this.state.sortOrder === "DESC") {
         sortedEmployees.reverse();
         this.setState({ sortOrder: "ASC" });
-      } else {
-        this.setState({ sortOrder: "DESC" });
+       } 
+      else {
+        this.setState({ results: sortedEmployees })
       }
-      this.setState({ results: sortedEmployees })
-    }
-    sortByLocation = () => {
-      console.log('coming')
-      const sortedEmployees = this.state.results.sort((a, b) => {
-        if (b.location.state > a.location.state) {
-          return -1
-        }
-        if (a.location.state > b.location.state) {
-          return 1
-        }
-        return 0;
-      });
-  
-      if (this.state.sortOrder === "DESC") {
-        sortedEmployees.reverse();
-        this.setState({ sortOrder: "ASC" });
-      } else {
-        this.setState({ sortOrder: "DESC" });
-      }
-      this.setState({ results: sortedEmployees })
-    }
+     
+    } 
+   
   
 
 
@@ -79,14 +76,15 @@ render() {
           search={this.state.search}
         />
          <Container>
-        <table className=" col-10 text-center">
+        <table className=" col-12 text-center">
           <thead>
             <tr>
               <th>Image</th>
-              <th>Name  <span className="downArrow" onClick={this.sortByName}></span></th>
+              <th>Name <i class="fas fa-angle-down" onClick={this.sortByAscName}></i>
+              <i class="fas fa-angle-up"onClick={this.sortByDscName}></i> </th>
               <th>Phone</th>
               <th>Email</th>
-              <th>City, State, Country <span className="downArrow" onClick={this.sortByLocation}></span></th>
+              <th>City, State, Country </th>
             </tr>
           </thead>
           <tbody>
