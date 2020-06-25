@@ -20,10 +20,11 @@ thead tr {
     height: 50px;
     background-color:#185a66;
     color: white;
+    font-size: 18px;
 }
 
 tbody{
-    font-size: 15px;
+    font-size: 17px;
 }
 
 
