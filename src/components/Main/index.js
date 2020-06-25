@@ -64,9 +64,6 @@ class Main extends Component {
       }
      
     } 
-   
-  
-
 
 render() {
     return (
@@ -80,8 +77,8 @@ render() {
           <thead>
             <tr>
               <th>Image</th>
-              <th>Name <i class="fas fa-angle-down" onClick={this.sortByAscName}></i>
-              <i class="fas fa-angle-up"onClick={this.sortByDscName}></i> </th>
+              <th>Name <i class="fas fa-sort-down" onClick={this.sortByAscName}></i>
+              <i class="fas fa-sort-up"onClick={this.sortByDscName}></i> </th>
               <th>Phone</th>
               <th>Email</th>
               <th>City, State, Country </th>
