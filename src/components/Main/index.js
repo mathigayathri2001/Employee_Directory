@@ -48,6 +48,27 @@ class Main extends Component {
       }
       this.setState({ results: sortedEmployees })
     }
+    sortByLocation = () => {
+      console.log('coming')
+      const sortedEmployees = this.state.results.sort((a, b) => {
+        if (b.location.state > a.location.state) {
+          return -1
+        }
+        if (a.location.state > b.location.state) {
+          return 1
+        }
+        return 0;
+      });
+  
+      if (this.state.sortOrder === "DESC") {
+        sortedEmployees.reverse();
+        this.setState({ sortOrder: "ASC" });
+      } else {
+        this.setState({ sortOrder: "DESC" });
+      }
+      this.setState({ results: sortedEmployees })
+    }
+  
 
 
 render() {
@@ -65,7 +86,7 @@ render() {
               <th>Name  <span className="downArrow" onClick={this.sortByName}></span></th>
               <th>Phone</th>
               <th>Email</th>
-              <th>City, State, Country <span className="downArrow" onClick={this.sortByName}></span></th>
+              <th>City, State, Country <span className="downArrow" onClick={this.sortByLocation}></span></th>
             </tr>
           </thead>
           <tbody>
