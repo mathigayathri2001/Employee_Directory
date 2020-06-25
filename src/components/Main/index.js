@@ -65,7 +65,7 @@ render() {
               <th>Name  <span className="downArrow" onClick={this.sortByName}></span></th>
               <th>Phone</th>
               <th>Email</th>
-              <th>City,State,Country <span className="downArrow" onClick={this.sortByName}></span></th>
+              <th>City, State, Country <span className="downArrow" onClick={this.sortByName}></span></th>
             </tr>
           </thead>
           <tbody>
